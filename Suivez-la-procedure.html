@@ -1,4 +1,4 @@
-<html><link rel="stylesheet" type="text/css" href="style.css" /><body><div class="container"><p class="menu"><a href="index.html">Index</a></p><h1>Suivez la procédure</h1><p class="auteur">par Laurent Braud</p><p class="info">23/04/2012</p><p class="chapo"><p>Je roule ma bosse depuis des années dans les fosses des serpents et les cryptes. Le serveur principal de <i>Dungeon Crawl Stone Soup</i> me compte un petit millier de parties. Pourtant, l'autre jour, je suis mort au niveau un, quand mon mage a fui une meute de chacals et s'est retrouvé dans une impasse. Le hasard, sous le nom de <i>génération procédurale</i>, a encore frappé.</p></p><p>«Génération procédurale» est le nom adopté par les développeurs pour
+<html><link rel="stylesheet" type="text/css" href="style.css" /><body><div class="container"><p class="menu"><a href="index.html">Index</a></p><h1>Suivez la procédure</h1><p class="auteur">par Laurent Braud</p><p class="info">23/04/2012</p><div class="chapo"><p>Je roule ma bosse depuis des années dans les fosses des serpents et les cryptes. Le serveur principal de <i>Dungeon Crawl Stone Soup</i> me compte un petit millier de parties. Pourtant, l'autre jour, je suis mort au niveau un, quand mon mage a fui une meute de chacals et s'est retrouvé dans une impasse. Le hasard, sous le nom de <i>génération procédurale</i>, a encore frappé.</p></div><p>«Génération procédurale» est le nom adopté par les développeurs pour
 désigner de façon générale un algorithme, un sous-programme, qui
 fournit du contenu de façon aléatoire -- ou plutôt
 [?pseudo-aléatoire], parce que le hasard n'existe pas chez nos amis
@@ -10,16 +10,12 @@ l'algorithme se contente de créer le liant entre les zones jouables,
 construites à la main. Dans <i>Skyrim</i> ou <i>Just Cause</i>, la topographie
 entre les points importants est crachée par un ordinateur, avant d'être
 retouchée (c'est donc de la génération <i>statique</i>, qui est
-la même pour chaque joueur).
-
-
-
-A l'opposé de ce contenu intersticiel, certaines formes de génération
+la même pour chaque joueur).</p><p>A l'opposé de ce contenu intersticiel, certaines formes de génération
 procédurale prennent toute la place au point que le jeu n'est rien
 d'autre qu'une visite du résultat, une ode à la gloire de
 l'algorithme. On y trouve quelques adaptations extrêmes de
 l'<i>Elite</i>-like
-<sup><a href="#note-1">1</a></sup>, comme
+<span id="upnote1"><sup><a href="#note1">1</a></sup></span>, comme
 <i><a href="http://www.infinity-universe.com">Infinity</a></i> et plus encore
 l'hallucinant <i>[?Noctis]</i> qui invite le joueur à visiter-créer la
 galaxie dans les moindres détails de chaque planète, les systèmes «découverts» étant notés sur le catalogue du
@@ -32,13 +28,7 @@ on peut y parcourir les détails de chaque bataille pour apprendre
 qu'à l'hiver 423, le nain Shedim Bonescavern a perdu une oreille face
 à la kobold Axmu Oxdukutsmob, mais a pu s'enfuir. Mais [qu'est-ce
 que l'exploration pure->./Fin-et-soif-d-explorer] dans un
-monde qui ne préexiste pas au joueur ?
-
-
-
-<h2>Situations réutilisables après lavage</h2>
-
-Entre ces extrêmes, l'utilisation la plus courante du terme renvoie au rogue-like et hack'n'slash,
+monde qui ne préexiste pas au joueur ?</p><p><h2>Situations réutilisables après lavage</h2></p><p>Entre ces extrêmes, l'utilisation la plus courante du terme renvoie au rogue-like et hack'n'slash,
 inspirés des auto-donjons des jeux de rôle sur table.  L'objectif est
 principalement la rejouabilité : pour chaque nouvelle partie et chaque
 niveau, l'algorithme produit un ensemble de données jouables en soi
@@ -49,11 +39,7 @@ son stock, voire retraverser tout le donjon à l'envers (fin habituelle
 des rogue-like). Le procédural n'intervient pas pendant ces phases;
 l'objet produit n'est pas intéressant en soi (ce kobold est le même
 que tous les autres kobolds) mais la situation qu'elle induit et ses
-développements le sont.
-
-
-
-En même temps, les développeurs se dédouanent virtuellement de la
+développements le sont.</p><p>En même temps, les développeurs se dédouanent virtuellement de la
 difficulté. Pourquoi y a-t-il un mode <i>hardcore</i> dans la série
 <i>Diablo</i>, obligatoire dans tous les rogue-like, mais impensable dans
 <i>Mass Effect</i> ? Plusieurs facteurs l'expliquent, en premier lieu la
@@ -67,12 +53,10 @@ dans les deux cas. Dans un niveau procédural, on ne peut pas en vouloir au hasa
 les chances que cette situation prenne place étaient minces, ce qui rend finalement 
 cette fin assez épique -- et peut-être que l'équipement également aléatoire va
 permettre de s'en sortir. D'où le fait que les rogue-like font
-partie des jeux considérés comme les plus difficiles actuellement.
-
-<h2>Au fond de ce couloir, une porte entrouverte</h2>
-
-Les algorithmes eux-mêmes se rangent dans plusieurs classes. Le plus
-simple dispose d'un ensemble de tuiles qu'il recolle [[En particulier, la génération des artefacts est ainsi modélisée, comme dans le système de <i>Diablo</i> qui colle<sup><a href="#note-2">2</a></sup>sant une carte assez fine avec par
+partie des jeux considérés comme les plus difficiles actuellement.</p><p><h2>Au fond de ce couloir, une porte entrouverte</h2></p><p>Les algorithmes eux-mêmes se rangent dans plusieurs classes. Le plus
+simple dispose d'un ensemble de tuiles qu'il recolle <span id="upnote2"><sup><a href="#note2">2</a></sup></span>; 
+le plus avancé dessine des périmètres détaillés. Le plus souvent, les décors
+suivent une version mixte, produisant une carte assez fine avec par
 endroits des éléments prédéfinis. L'univers fournissant plusieurs
 atmosphères, donc plusieurs algorithmes (un pour la jungle, un pour la
 caverne aux araignées, etc.), il n'est pas interdit de mélanger les
@@ -84,21 +68,18 @@ les cavernes, enfin, sont définitivement chaotiques. Il est amusant de
 voir que la fin du jeu opère un retournement, puisque l'enfer retrouve
 la régularité de l'église, et s'achève par deux niveaux fixés à
 l'avance. Trop de chaos contrasterait avec cette fin préétablie : il
-faut donc entourer le contenu fixe d'une certaine régularité.
-
-
-
-Généralisées avec succès dans <i>Diablo 2</i>, ces méthodes font apparaître
+faut donc entourer le contenu fixe d'une certaine régularité.</p><p>Généralisées avec succès dans <i>Diablo 2</i>, ces méthodes font apparaître
 un symptôme chez le joueur. A force d'exploration, celui-ci est amené
 à analyser et comprendre la boîte noire qu'est l'algorithme. Au final,
 un joueur expérimenté a plus de chances de trouver le chemin optimal
 entre le début du niveau et sa sortie. C'est-à-dire que l'algorithme
 procédural induit en creux un nouvel algorithme dans le cerveau du
 joueur, cette fois-ci avec un objectif d'optimalité 
-[[On a donc ici un cas particulier du joueur comme programme optimal que
-décrit Mathieu Triclot, dans <i>Philosophie des jeux vidéo</i> (2011).]]. Ce nouvel
+<span id="upnote3"><sup><a href="#note3">3</a></sup></span>. Ce nouvel
 algorithme comporte également une partie aléatoire : par exemple, le
-Sanctuaire des Arcanes est constitué de qua<sup><a href="#note-3">3</a></sup>lémente directement cette contre-mesure comme outil principal de
+Sanctuaire des Arcanes est constitué de quatre branches dont une seule
+mène au niveau suivant.</p><p>Que dire alors du gameplay de <i>Dungeon Crawl Stone Soup</i>, qui
+implémente directement cette contre-mesure comme outil principal de
 déplacement, l'<i>auto-explore</i> ? La touche <b>o</b> déplace le personnage
 automatiquement en explorant toute la zone, rendant la main au joueur
 lorsqu'une réelle interaction est possible. N'est-ce pas donner deux
@@ -112,9 +93,7 @@ générale : dans <i>Skyrim</i>, plutôt qu'un <i>fast-travel</i> polémique,
 aurait-il été possible d'implémenter un voyage en mode accéléré quand
 il ne se passe rien, à la façon du
 <a href="http://x3wiki.com/index.php/Singularity_Engine_Time_Accelerator">MATS</a>
-de <i>X³</i> ?
-
-Pour finir ce tour, des cas comme la série <i>The Elder Scrolls</i> proposent une autre
+de <i>X³</i> ?</p><p>Pour finir ce tour, des cas comme la série <i>The Elder Scrolls</i> proposent une autre
 définition d'un renouvellement procédural des décors. Dans
 <i>Daggerfall</i>, les quelque 15000 villages et donjons sont bel et bien
 aléatoires. Dans la suite de la série, leur nombre est réduit pour permettre leur
@@ -125,4 +104,6 @@ donjons répétitifs. La disponibilité de ce modèle dans le
 d'utiliser ces tuiles pour créer ses propres lieux, et au joueur
 d'essayer les mille et un donjons ainsi produits. En quelque sorte, la
 procédure ne serait plus informatique mais émergerait de la production
-globale de l'ensemble des joueurs.</p><p class="ps"><p></p></p></div></body></html>
+globale de l'ensemble des joueurs.</p><div class="ps"><p></p></div><ul><li id="note1"><a href="#upnote1">&uarr;</a>1. Voir aussi <a href="http://www.guardian.co.uk/books/2003/oct/18/features.weekend">cet article</a>
+sur le procédural abandonné dans l'<i>Elite</i> original.</li><li id="note2"><a href="#upnote2">&uarr;</a>2. En particulier, la génération des artefacts est ainsi modélisée, comme dans le système de <i>Diablo</i> qui colle un objet à un préfixe et suffixe (<i>ruby -- amulet -- of the stars</i>).</li><li id="note3"><a href="#upnote3">&uarr;</a>3. On a donc ici un cas particulier du joueur comme programme optimal que
+décrit Mathieu Triclot, dans <i>Philosophie des jeux vidéo</i> (2011).</li></ul></div></body></html>

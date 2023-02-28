@@ -1,33 +1,16 @@
-<html><link rel="stylesheet" type="text/css" href="style.css" /><body><div class="container"><p class="menu"><a href="index.html">Index</a></p><h1>La méthode Zachtronics, suite</h1><p class="auteur">par Laurent Braud</p><p class="info">15/10/2018</p><p class="chapo"><p>Dans un [précédent
+<html><link rel="stylesheet" type="text/css" href="style.css" /><body><div class="container"><p class="menu"><a href="index.html">Index</a></p><h1>La méthode Zachtronics, suite</h1><p class="auteur">par Laurent Braud</p><p class="info">15/10/2018</p><div class="chapo"><p>Dans un [précédent
 épisode->./La-formule-Zachtronics] -- il y a déjà
  trois ans ! -- nous nous penchions sur la routine adoptée par
 le studio Zachtronics pour produire ses jeux de puzzle avec
 régularité. Ce qui n'a [pas manqué de se produire par la
 suite->./La-programmation-c-est-du-chinois,623]. 
 Si le succès n'est pas fulgurant, il a le mérite d'être constant : on est donc en droit de s'attendre à une foule d'imitations. Pourtant, les candidats ne se pressent pas au portillon. Oui, en cherchant bien, on trouve bien quelques <i>zachlikes</i> ... mais ce que ces copies bancales nous montrent surtout, c'est que le dosage du puzzle à la Zachtronics est bien plus fin qu'il n'en a l'air.
-</p></p><p><h2>Céder à la facilité</h2>
-
-Commençons par un suspect à l'apparence sympathique. Dans <i>Algo-Bot</i>, on suit deux robots qui nous promènent dans un grand vaisseau. Pas d'objectif clair, mais on ne va pas chipoter, on est d'abord là pour résoudre du puzzle. Le premier robot fait la réplique, l'autre doit être mené pas à pas : avancer, tourner, prendre un objet, le lâcher, voilà la sortie, nouveau niveau. Rien de bien méchant en apparence.
-
-
-
-Problème : justement, rien de méchant. C'est même parfaitement ennuyeux, puisqu'aucun des problèmes n'a d'intérêt -- j'avoue certes avoir jeté l'éponge avant la fin. Le tout sous une interface plutôt ratée : à chaque niveau, on voit quasi immédiatement la liste des commandes à écrire, mais on va passer de longues minutes à les assembler, à coup de cliquer-déplacer pour chaque commande (des raccourcis claviers existent mais vont à peine plus vite). Rien de tel pour vous frustrer un joueur. Et les "blagues" rouillées qu'émettent les robots n'arrangent rien. Hop, on passe vite au suivant.
-
-<h2>Attention aux prémisses</h2>
-
-Trop facile, disions-nous. Ah, ça, <i>Prime Mover</i> a de quoi réveiller le
+</p></div><p><h2>Céder à la facilité</h2></p><p>Commençons par un suspect à l'apparence sympathique. Dans <i>Algo-Bot</i>, on suit deux robots qui nous promènent dans un grand vaisseau. Pas d'objectif clair, mais on ne va pas chipoter, on est d'abord là pour résoudre du puzzle. Le premier robot fait la réplique, l'autre doit être mené pas à pas : avancer, tourner, prendre un objet, le lâcher, voilà la sortie, nouveau niveau. Rien de bien méchant en apparence.</p><p>Problème : justement, rien de méchant. C'est même parfaitement ennuyeux, puisqu'aucun des problèmes n'a d'intérêt -- j'avoue certes avoir jeté l'éponge avant la fin. Le tout sous une interface plutôt ratée : à chaque niveau, on voit quasi immédiatement la liste des commandes à écrire, mais on va passer de longues minutes à les assembler, à coup de cliquer-déplacer pour chaque commande (des raccourcis claviers existent mais vont à peine plus vite). Rien de tel pour vous frustrer un joueur. Et les "blagues" rouillées qu'émettent les robots n'arrangent rien. Hop, on passe vite au suivant.</p><p><h2>Attention aux prémisses</h2></p><p>Trop facile, disions-nous. Ah, ça, <i>Prime Mover</i> a de quoi réveiller le
 joueur assoupi. À la place du robot, nous promenons maintenant des
-nombres : moins séduisant, mais plus pratique. Après une introduction, nous voilà dans un grand bain (d'acide). Ça pique les yeux, ça fait mal au crâne, on croit qu'on y est presque : mais non, chaque niveau est une galère sans nom.
-
-Cette fois-ci, le danger est bien différent. Il ne vient pas tant de
+nombres : moins séduisant, mais plus pratique. Après une introduction, nous voilà dans un grand bain (d'acide). Ça pique les yeux, ça fait mal au crâne, on croit qu'on y est presque : mais non, chaque niveau est une galère sans nom.</p><p>Cette fois-ci, le danger est bien différent. Il ne vient pas tant de
 la difficulté élevée : certes, on aurait bien aimé quelques puzzles
 transitoires entre le tutoriel et le hardcore, mais bon, on mettra ça sur le dos de la <i>darksoul</i>isation ambiante. Non, le problème vient du
-choix des composants de base, de l'axiomatique en somme.
-
-
-
-
-Dans un (vrai) Zachtronics, les composants atomiques sont faits pour être
+choix des composants de base, de l'axiomatique en somme.</p><p>Dans un (vrai) Zachtronics, les composants atomiques sont faits pour être
 naturels. Prendre un objet, le déplacer, le tourner. L'assimilation
 est évidente ; à nous d'agglomérer ces éléments de manière
 complexe. Dans <i>Prime Mover</i>, même les éléments de base sortent de la zone de confort. Pour orienter nos nombres, par exemple : au
@@ -37,30 +20,10 @@ faudra continuellement s'en servir, car c'est le seul moyen de séparer
 les objets. Les conditions, le calcul, tout est à l'avenant. Bricoler une solution, c'est comme essayer de construire
 une maison en lego en s'interdisant les briques rectangulaires : on
 peut y arriver, mais on a un peu l'impression de s'arracher les
-cheveux pour rien, et le résultat sera loin d'être satisfaisant.
-
-Dommage, parce que <i>Prime Mover</i> a envie de raconter des choses intéressantes : un composant gigogne, par exemple, permet de bricoler des sous-circuits à l'infini. On y croit un peu ... jusqu'à ce que l'interface imparfaite coupe court à ce genre d'expérimentations. Dépité, on finit par abandonner l'idée d'aller au bout du jeu.
-
-<h2>Et trois, <i>Zeroes</i> ?</h2>
-
-Trop facile, puis trop complexe : tout compte fait, la fourchette du zachtrolike est plus resserrée qu'on ne pouvait le croire, et l'interface se révèle être un facteur décisif. Allez, courage. Il doit bien exister un clone potable. Et
-si c'était <i>Silicon Zeroes</i> ? Ici encore, on manipule des nombres, et encore sous la forme de circuits à bricoler. Mais on quitte l'univers alien bizarroïde pour un historique de la micro-informatique très 1970. Bascules, portes logiques, additionneurs : tout ceci ressemble fort à un cours d'électronique de base (tout en esquivant la notion de <i>bit</i> : que c'est audacieux). Plus lisible, plus pédagogique, d'accord. Mais est-ce qu'il n'aurait pas oublié d'être <i>fun</i> ?
-
-
-
-Tout est relatif bien sûr, mais si vous lisez jusque là, c'est que votre notion du <i>fun</i> n'est pas loin de la mienne. Malgré ses airs sévères, <i>Silicon Zeroes</i> se révèle étonnamment entraînant. Une interface claire, une progression naturelle, quelques niveaux particulièrement costauds sur la fin : tout y est. Oh, d'accord, on peut toujours râler
-quand les (nombreux) câbles s'emmêlent. Mais rien de rédhibitoire, et si l'on abandonne, c'est plutôt de notre fait qu'à cause d'un gameplay récalcitrant. Car des premiers circuits aux mémoires, puis à la parallélisation, chaque étape nous demande un joli saut conceptuel. Heureusement, un système de copies permet d'enregistrer les sous-circuits ; une fois divisés, les problèmes deviennent plus compréhensibles.
-
-On peut même compter sur une valeur ajoutée. Tandis que les Zachtronics n'ont pas la prétention de faire de la véritable programmation (ni chimie, ni alchimie, selon le titre), <i>Silicon Zeroes</i> parvient à nous apprendre des choses. Je pensais connaître deux-trois concepts de micro-informatique : malgré tout, ces travaux pratiques m'ont appris des choses sur les <a href="https://en.wikipedia.org/wiki/Pipeline_(computing)">pipelines</a> qu'avaient manqué toutes mes années d'université.
-
-<h2>De retour à la maison</h2>
-
-Et chez Zachtronics, quoi de neuf pendant ce temps-là ? De neuf, pas grand-chose. Depuis <a href="./La-programmation-c-est-du-chinois,623">SHENZHEN I/O</a>, on a eu droit au très joli <i>Opus Magnum</i>, puis à un <i>Exapunks</i> plus spécialisé -- un jeu sur
-deux s'oriente vers la marotte de Zach Barth : la programmation en pseudo-assembleur. Toujours aussi soignés, toujours bien calibrés, on note toutefois dans ces derniers titres un certain assouplissement : alors qu'il fallait jouer des coudes pour caser tous les éléments dans les cases, les contraintes spatiales ont été pratiquement enlevées, permettant à chacun de déployer une solution aussi large que nécessaire.
-
-
-
-Reste le plaisir inégalé de l'ascension. Tous les puzzles ne se valent pas, certains sont forcément plus laborieux que d'autres. Mais régulièrement, on tombe sur ce mur, ce niveau dont on ne comprend absolument pas le principe. Est-il vraiment faisable ? À l'incrédulité succède une petite étincelle, une vague idée que l'on bricole fiévreusement ; mais non, cela ne fonctionne pas. On reste déçu, le regard dans le vague, fixant sans bouger son écran, soudain c'est l'épiphanie, c'était évident enfin, même si on n'ose pas vraiment y croire en allumant la machine, et oui ! tout fonctionne, et on est tout joyeux d'y replonger, histoire de grapiller quelques crans dans l'histogramme des solutions. La joie de pouvoir gravir un mur apparemment infranchissable, c'est cela la garantie Zachtronics. Et c'est pour cela qu'on maintient son abonnement. Oui, c'est toujours la même chose. Pourquoi changer ?</p><p class="ps"><p>Il manque probablement à cet exposé d'autres titres, et notamment
+cheveux pour rien, et le résultat sera loin d'être satisfaisant.</p><p>Dommage, parce que <i>Prime Mover</i> a envie de raconter des choses intéressantes : un composant gigogne, par exemple, permet de bricoler des sous-circuits à l'infini. On y croit un peu ... jusqu'à ce que l'interface imparfaite coupe court à ce genre d'expérimentations. Dépité, on finit par abandonner l'idée d'aller au bout du jeu.</p><p><h2>Et trois, <i>Zeroes</i> ?</h2></p><p>Trop facile, puis trop complexe : tout compte fait, la fourchette du zachtrolike est plus resserrée qu'on ne pouvait le croire, et l'interface se révèle être un facteur décisif. Allez, courage. Il doit bien exister un clone potable. Et
+si c'était <i>Silicon Zeroes</i> ? Ici encore, on manipule des nombres, et encore sous la forme de circuits à bricoler. Mais on quitte l'univers alien bizarroïde pour un historique de la micro-informatique très 1970. Bascules, portes logiques, additionneurs : tout ceci ressemble fort à un cours d'électronique de base (tout en esquivant la notion de <i>bit</i> : que c'est audacieux). Plus lisible, plus pédagogique, d'accord. Mais est-ce qu'il n'aurait pas oublié d'être <i>fun</i> ?</p><p>Tout est relatif bien sûr, mais si vous lisez jusque là, c'est que votre notion du <i>fun</i> n'est pas loin de la mienne. Malgré ses airs sévères, <i>Silicon Zeroes</i> se révèle étonnamment entraînant. Une interface claire, une progression naturelle, quelques niveaux particulièrement costauds sur la fin : tout y est. Oh, d'accord, on peut toujours râler
+quand les (nombreux) câbles s'emmêlent. Mais rien de rédhibitoire, et si l'on abandonne, c'est plutôt de notre fait qu'à cause d'un gameplay récalcitrant. Car des premiers circuits aux mémoires, puis à la parallélisation, chaque étape nous demande un joli saut conceptuel. Heureusement, un système de copies permet d'enregistrer les sous-circuits ; une fois divisés, les problèmes deviennent plus compréhensibles.</p><p>On peut même compter sur une valeur ajoutée. Tandis que les Zachtronics n'ont pas la prétention de faire de la véritable programmation (ni chimie, ni alchimie, selon le titre), <i>Silicon Zeroes</i> parvient à nous apprendre des choses. Je pensais connaître deux-trois concepts de micro-informatique : malgré tout, ces travaux pratiques m'ont appris des choses sur les <a href="https://en.wikipedia.org/wiki/Pipeline_(computing)">pipelines</a> qu'avaient manqué toutes mes années d'université.</p><p><h2>De retour à la maison</h2></p><p>Et chez Zachtronics, quoi de neuf pendant ce temps-là ? De neuf, pas grand-chose. Depuis <a href="./La-programmation-c-est-du-chinois,623">SHENZHEN I/O</a>, on a eu droit au très joli <i>Opus Magnum</i>, puis à un <i>Exapunks</i> plus spécialisé -- un jeu sur
+deux s'oriente vers la marotte de Zach Barth : la programmation en pseudo-assembleur. Toujours aussi soignés, toujours bien calibrés, on note toutefois dans ces derniers titres un certain assouplissement : alors qu'il fallait jouer des coudes pour caser tous les éléments dans les cases, les contraintes spatiales ont été pratiquement enlevées, permettant à chacun de déployer une solution aussi large que nécessaire.</p><p>Reste le plaisir inégalé de l'ascension. Tous les puzzles ne se valent pas, certains sont forcément plus laborieux que d'autres. Mais régulièrement, on tombe sur ce mur, ce niveau dont on ne comprend absolument pas le principe. Est-il vraiment faisable ? À l'incrédulité succède une petite étincelle, une vague idée que l'on bricole fiévreusement ; mais non, cela ne fonctionne pas. On reste déçu, le regard dans le vague, fixant sans bouger son écran, soudain c'est l'épiphanie, c'était évident enfin, même si on n'ose pas vraiment y croire en allumant la machine, et oui ! tout fonctionne, et on est tout joyeux d'y replonger, histoire de grapiller quelques crans dans l'histogramme des solutions. La joie de pouvoir gravir un mur apparemment infranchissable, c'est cela la garantie Zachtronics. Et c'est pour cela qu'on maintient son abonnement. Oui, c'est toujours la même chose. Pourquoi changer ?</p><div class="ps"><p>Il manque probablement à cet exposé d'autres titres, et notamment
 ceux de Tomorrow Corporation, <i>Human Resource Machine</i> et <i>7 Billion
 Humans</i>. Diable, le temps manque pour tout essayer soi-même : donnez
-votre avis dans les commentaires.</p></p></div></body></html>
+votre avis dans les commentaires.</p></div></div></body></html>
