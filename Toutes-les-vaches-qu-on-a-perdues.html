@@ -1,0 +1,51 @@
+<html><link rel="stylesheet" type="text/css" href="style.css" /><body><div class="container"><p class="menu"><a href="index.html">Index</a></p><h1>Toutes les vaches qu'on a perdues</h1><p class="auteur">par Laurent Braud</p><p class="info">26/02/2013</p><p class="chapo"><p>Le <a href="./JELLY-NO-FUCKING-PUZZLE">désarroi de mon confrère</a> sur l'innocent jeu de puzzle <i>Jelly no Puzzle</i> a réveillé un sentiment similaire, mêlé à une satisfaction confuse d'avoir laissé tout ça derrière moi. Et pourtant, <i>Where are the cows</i> ne sortira jamais de ma mémoire.</p></p><p>C'est l'histoire d'une rencontre. Que dis-je, c'est l'histoire d'un grand choc.
+
+A l'époque où les ordinateurs n'étaient encore que des outils de laboratoire, les gens aimaient déjà, croyez-le ou non, les énigmes, qui sortaient sous forme papier. <a href="http://en.wikipedia.org/wiki/Robert_Abbott_(game_designer)">Robert Abbott</a> est un des plus connus, sinon le plus connu des faiseurs de puzzle. Et pour l'artiste, il fallait laisser sa trace dans un ultime chef-d'oeuvre, un condensé, qui soit simple et compact dans sa définition, mais extrêmement difficile à résoudre humainement<sup><a href="#note-1">1</a></sup>.
+
+Ce monstre, apparu dans son bouquin <i>Supermazes</i>, a pour nom <i>Where are the cows</i>. On le trouve aujourd'hui implémenté sous <a href="http://scullucs.com/wac/vaches.html">la forme d'une page web</a>. Allez-y, ça ne mord pas. Pas tout de suite.
+
+
+
+Il n'est pas aussi immédiat que <i>Jelly no Puzzle</i>, parce qu'il y a tout de même 17 cases, avec chacune un texte différent. Mais quelle que soit la situation, le joueur n'a jamais qu'un seul choix : actionner la case bleue ou la violette. Leur mouvement reste toujours (sauf n°55) déterminée par la situation.
+
+Au fur et à mesure, des schémas se mettent en place. Les jetons se mettent à former des cycles, s'intervertissent, reviennent dans la configuration initiale. Bien sûr, ils n'atteignent jamais l'objectif. Impossible de passer la 75 et la 25 en même temps. Lors d'une analyse plus poussée, des propriétés précises apparaissent, assurant que telle ou telle configuration ne puisse être atteinte, sans jamais conclure.
+
+La terrible question se pose alors, de plus en plus insistante -- et si tout ça n'était qu'une bonne blague ? Et si l'ultime puzzle de Robert Abott n'avait pas de solution ? 
+
+<h2>Des vaches en gelée</h2>
+
+Certes, <i>Where are...</i> et <i>Jelly</i> ont des dissimilarités notables. Le puzzle <i>kawaï</i> est constitué de plusieurs niveaux, chacun suffisamment simple pour s'incruster dans une représentation mentale que le joueur promènera toute la journée tant qu'il n'a pas trouvé, revenant le hanter dans les toilettes et à la pause café. Avec son seul puzzle plus complexe, <i>Where are...</i> provoque moins immédiatement ce phénomène -- mais on finit par y arriver avec un peu de ténacité, soyez-en sûrs.
+
+Par contre, le cheminement mental reste le même : 
+-* une phase d'<b>approche</b>, où l'on tente quelques mouvements;
+-* une phase de <b>compréhension partielle</b>, locale;
+-* une phase où l'on ne parvient pas à <b>rassembler les morceaux</b>;
+-* une phase d'<b>analyse</b>, où l'on reprend un raisonnement d'ensemble;
+-* une phase de <b>doute</b>, où l'on croit avoir effectivement joué tous les coups possibles, et l'on questionne de plus en plus la faisabilité du puzzle ; ou bien on doute de ses propres capacités de réflexion.
+
+
+
+La différence avec d'autres jeux de puzzle, et ce qui le rend particulièrement ardu, c'est peut-être que la première phase, au lieu de nous faire comprendre ce qu'il se passe, ne fait que nous figer dans des schémas. Si je joue à <i>Portal</i>, la phase de tâtonnement nous met souvent sur la voie. Il reste à recoller les morceaux, ce qui est plus ou moins difficile. Dans <i>Jelly</i>, le cerveau  du joueur peut choisir d'ignorer un pan du puzzle dès le début -- voire pire : après l'avoir exploré une fois infructueusement -- alors que c'était la bonne voie. Parfois, par chance ou bonne intuition, on tombe directement sur la bonne idée ; ce qu'<a href="./JELLY-NO-FUCKING-PUZZLE">Anthony note</a> : "personne n’est coincé au même endroit".
+
+Au final, les heureux élus connaissent aussi
+-* un <b>déclic</b> où ils n'osent pas trop y croire,
+-* une phase de <b>joie pure</b>,
+-* suivie rapidement d'une phase de <b>questionnements</b>. <i>Pourquoi n'ai-je pas vu que l'on pouvait bouger ce cube par ici ? J'ai pourtant refait ce chemin des dizaines de fois.</i>
+
+En corollaire, ils passent aussi par une phase d'admiration pour le créateur du jeu.
+
+<h2>Une histoire qui finit mal</h2>
+
+Ca n'a pas été mon cas. (Enfin, l'admiration, si.)
+
+Je n'ai pas trouvé la solution de <i>Where are the cows</i>. J'ai jugé, avec mes raisonnements fragiles, qu'il n'y en n'avait pas. Pourtant, après avoir tant lutté, tant tenté de comprendre ce graphe, il était impossible d'abandonner les vaches sans avoir véritablement montré qu'elles n'existaient pas. Mais comment savoir ? Internet n'en donne aucune solution; il n'y a pas, comme pour <i>Jelly</i>, de vidéo youtube du niveau -- et c'est mieux ainsi.
+
+Abbott était à l'origine un informaticien. J'ai retroussé mes manches et me suis résolu à aller l'affronter sur son propre terrain : écrire un programme qui ré-implémente le jeu, et explore tous les coups possibles[[Hey, c'était pas si facile que ça.]]. 
+
+
+
+Que d'émotions mêlées, au moment d'appuyer s<sup><a href="#note-2">2</a></sup>ultat implacable, que de tentatives de justification <i>a posteriori</i> : était-ce une victoire ? La <a href="http://en.wikipedia.org/wiki/Four_color_theorem#Proof_by_computer">preuve du théorème des quatre couleurs</a> n'est-elle pas considérée par les mathématiciens comme une preuve valide ? En quoi ma technique différait de l'analyse systématique, à la main, des 136 coups possibles?
+
+Faibles justifications. Entraîné par le jeu, j'en avais perdu de vue la notion même.
+
+Ô vaches, me pardonnerez-vous ?</p><p class="ps"><p></p></p></div></body></html>
