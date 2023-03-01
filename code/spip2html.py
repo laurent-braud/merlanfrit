@@ -40,6 +40,7 @@ class Article(Base):
     chapo:Mapped[str]
     texte:Mapped[str]
     ps:Mapped[str]
+    statut:Mapped[str]
     date:Mapped[datetime]
     auteurs: Mapped[List[Auteur]] = relationship(secondary=auteurarticle)
 
@@ -53,7 +54,7 @@ class Slug(Base):
 def extract():
     total = {}
     shutil.copy('index.html', os.path.join(OUTDIR, 'index.html'))
-    for a in session.query(Article).order_by(Article.date):
+    for a in session.query(Article).filter(Article.statut!='prepa').order_by(Article.date):
         slug = session.query(Slug).where(Slug.id_objet==a.id_article).where(Slug.type=='article').order_by(Slug.date.desc()).first()
         if slug is None:
             continue
