@@ -93,13 +93,15 @@ def extract():
         f.write(FOOTER)
         
 
-# strings
+# formatting
 
 retour = re.compile(r'\r')
 itemize = re.compile(r'-\*')
+dash = re.compile(r'--+')
+quote = re.compile(r'quote>')
 intertitre = re.compile(r'\{\{\{(.*?)\}\}\}', flags=re.DOTALL)
-gras = re.compile(r'\{\{(.*?)\}\}', flags=re.DOTALL)
-italic = re.compile(r'\{(.*?)\}', flags=re.DOTALL)
+gras = re.compile(r'\{\{([^{]*?)\}\}', flags=re.DOTALL)
+italic = re.compile(r'\{([^{]*?)\}', flags=re.DOTALL)
 note = re.compile(r'\[\[(.*?)\]\]', flags=re.DOTALL)
 mfurl = re.compile(r'http://merlanfrit.net/([^"]*)')
 url = re.compile(r'\[([^[]*?)->(.*?)\]', flags=re.DOTALL)
@@ -128,6 +130,8 @@ class SpipReader:
         nbp = []
         # formattage
         text = retour.sub(r'', text)
+        text = quote.sub(r'blockquote>', text)
+        text = dash.sub(r'&mdash;', text)
         text = intertitre.sub(r'<h2>\1</h2>', text)
         text = itemize.sub(r'<br/>&emsp;&mdash;&nbsp;', text)
         text = gras.sub(r'<b>\1</b>', text)
