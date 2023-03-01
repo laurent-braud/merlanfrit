@@ -22,3 +22,11 @@
     font-size:12px;
     border-top: 1px solid black;
 }
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
